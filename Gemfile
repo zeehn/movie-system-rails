@@ -59,4 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do 
   gem 'pg'
+  gem 'net-imap', '~> 0.2.1'
+  gem 'net-smtp', require: false
+  gem 'net-pop', '~> 0.1.1'
 end 
