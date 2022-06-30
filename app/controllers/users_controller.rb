@@ -48,7 +48,6 @@ private
   end
 
   def set_user 
-    fail
     @user = User.find_by!(slug: params[:id])
   end
 
