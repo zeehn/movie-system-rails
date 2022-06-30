@@ -1,5 +1,5 @@
 class UsersController < ApplicationController 
-  before_action :set_user, except: [:index, :new]
+  before_action :set_user, except: [:index, :new, :create]
   before_action :require_signin, except: [:new, :create]
   before_action :require_correct_user, only: [:edit, :update, :destroy]
 
@@ -47,6 +47,7 @@ private
   end
 
   def set_user 
+    fail
     @user = User.find_by!(slug: params[:id])
   end
 
